@@ -1,0 +1,105 @@
+.newjoyo_vcd1 {
+	BORDER-BOTTOM: #0099cc 1px solid; BORDER-LEFT: #0099cc 1px solid; BORDER-RIGHT: #0099cc 1px solid; BORDER-TOP: #0099cc 1px solid; LINE-HEIGHT: 18px
+}
+#homepage {
+	TEXT-ALIGN: center
+}
+#homepage_main {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; WIDTH: 100%; BORDER-BOTTOM: 0px
+}
+#homepage_left {
+	VERTICAL-ALIGN: top; WIDTH: 30%; TEXT-ALIGN: left
+}
+#homepage_middle {
+	VERTICAL-ALIGN: top; WIDTH: 50%; TEXT-ALIGN: center
+}
+#homepage_right {
+	VERTICAL-ALIGN: top; WIDTH: 20%; TEXT-ALIGN: right
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+TD {
+	FONT-SIZE: 9pt
+}
+.rotate_image10 {
+	MARGIN-BOTTOM: 20px
+}
+.rotate_image20 {
+	MARGIN-BOTTOM: 20px
+}
+.rotate_image30 {
+	MARGIN-BOTTOM: 20px
+}
+.rotate_image110 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image115 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image120 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image130 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image140 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image150 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image160 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.rotate_image180 {
+	MARGIN-BOTTOM: 10px; WIDTH: 107px; HEIGHT: 144px
+}
+.adTitle {
+	PADDING-LEFT: 30px; PADDING-BOTTOM: 15px
+}
+
+
+
+
+	        .INPUT_STYLE3{
+				BORDER-BOTTOM:  1px solid #000000;
+				BORDER-left:  0px ;
+				BORDER-right:  0px ;
+				BORDER-top:  0px ;
+				width:100%
+			}
+			.FILE_STYLE1{
+			 BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+			}
+			.SUBMIT_STYLE1{
+			 BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+			
+			}
+        	.btn3_mouseout {
+			 BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+			}
+			.btn3_mouseover {
+			 BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#D7E7FA); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+			}
+			.btn3_mousedown
+			{
+			 BORDER-RIGHT: #FFE400 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #FFE400 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #FFE400 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #FFE400 1px solid
+			}
+			.btn3_mouseup {
+			 BORDER-RIGHT: #2C59AA 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #2C59AA 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#C3DAF5); BORDER-LEFT: #2C59AA 1px solid; CURSOR: hand; COLOR: black; PADDING-TOP: 2px; BORDER-BOTTOM: #2C59AA 1px solid
+			}
+
+
+
+
+.grad{
+  borderColorDark:#ffffec;borderColorLight:#5e5e00;cellPadding:1;cellSpacing:0
+}
+
+
+.inputtext{
+ border:1px solid rgb(165,165,167); 
+ height:22px;background-repeat: 
+ no-repeat;line-height:21px; padding-left:0px
+}
