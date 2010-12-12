@@ -7,15 +7,15 @@ import java.io.InputStreamReader;
 public class Controller {
 	private User currentUser;
 	private	UserManager userManager = new UserManager();
-	private	String returnMessage;
+	private	String returnMsg;
 	private String Parameter[] = new String[4];
 //	private boolean iscurrentUserAssociation = false;
 	public Controller(){
-		returnMessage = "";
+		returnMsg = "";
 	};
 
 	//将输入的命令进行解析
-	public MessageAndError parseCommand(String command) {
+	public MsgAndError parseCommand(String command) {
 		if(command.equals("1"))
 			return userLogin();
 		if(command.equals("2"))
@@ -31,29 +31,25 @@ public class Controller {
 		if(command.equals("5"))
 			return queryAssociationActivity();
 		if(command.equals("0"))
-			return MessageAndError.EXIT;
-		return MessageAndError.SUCCESS;
-
+			return MsgAndError.EXIT;
+		return MsgAndError.SUCCESS;
 	}
-	
-	//查询用户相关的活动	
-	private MessageAndError queryAssociationActivity() {
+		
+	private MsgAndError queryAssociationActivity() {
 		System.out.println("请输入社团名字：");
 		setParameter(0);
 		User queryUser = userManager.findUserByName(Parameter[0]);
 		if(queryUser != null && queryUser instanceof Association){
 			Activity[] queryResult = ((Association) currentUser).queryActivity();
 			for(int i = 0; i < queryResult.length; i++)
-				returnMessage = returnMessage + Parameter[0]+ "\t" 
+				returnMsg = returnMsg + Parameter[0]+ "\t" 
 					+ queryResult[i].activitysToString() + "\n" ;
-			return MessageAndError.SUCCESS_MESSAGE;
+			return MsgAndError.SUCCESS_MSG;
 		}
-		return MessageAndError.ERROR_QUERY;
+		return MsgAndError.ERROR_QUERY;
 	}
-	
-	
-    //增加活动
-	private MessageAndError associationAddActivity() {
+
+	private MsgAndError associationAddActivity() {
 		if(currentUser == null)
 			System.out.println("请先登录");
 		if(currentUser instanceof Association){
@@ -64,16 +60,15 @@ public class Controller {
 			System.out.println("请输入活动开始时间：");
 			setParameter(2);
 			if(((Association) currentUser).addActivity(Parameter[0], Parameter[1], Parameter[2]))
-				return MessageAndError.SUCCESS;
-			return MessageAndError.ERROR_ADD;
+				return MsgAndError.SUCCESS;
+			return MsgAndError.ERROR_ADD;
 		}
 		else
 			System.out.println("当前用户不是社团用户");			
-		return MessageAndError.ERROR_ADD;
+		return MsgAndError.ERROR_ADD;
 	}
-    
-	//用户登录
-	private MessageAndError userLogin() {
+
+	private MsgAndError userLogin() {
 		System.out.println("请输入用户名字：");
 		setParameter(0);
 		System.out.println("请输入用户登录密码：");
@@ -81,13 +76,12 @@ public class Controller {
 		
 		currentUser = userManager.userLogin(Parameter[0], Parameter[1]);
 		if (currentUser != null )
-			return MessageAndError.SUCCESS;
+			return MsgAndError.SUCCESS;
 
-		return MessageAndError.ERROR_LOGIN;
-	} 
-	
-    //社团更改密码
-	private MessageAndError associationChangePassword() {
+		return MsgAndError.ERROR_LOGIN;
+	}
+
+	private MsgAndError associationChangePassword() {
 		System.out.println("请输入社团名字：");
 		setParameter(0);
 		System.out.println("请输入社团登录密码：");
@@ -95,23 +89,21 @@ public class Controller {
 		System.out.println("请输入新的密码：");
 		setParameter(2);
 		if (userManager.changePassword(Parameter[0], Parameter[1], Parameter[2]))
-			return MessageAndError.SUCCESS;
-		return MessageAndError.ERROR_CHANGEPW;
+			return MsgAndError.SUCCESS;
+		return MsgAndError.ERROR_CHANGEPW;
 	}
-    
-	//社团注册
-	private MessageAndError associationRegister() {
+
+	private MsgAndError associationRegister() {
 		System.out.println("请输入社团名字：");
 		setParameter(0);
 		System.out.println("请输入社团登录密码：");
 		setParameter(1);
 		if (userManager.associationRegister(Parameter[0], Parameter[1]))
-			return MessageAndError.SUCCESS;
-		return MessageAndError.ERROR_REGISTER;
+			return MsgAndError.SUCCESS;
+		return MsgAndError.ERROR_REGISTER;
 	}
-    
-	//用户更改密码
-	private MessageAndError userChangePassword() {
+
+	private MsgAndError userChangePassword() {
 		System.out.println("请输入用户名字：");
 		setParameter(0);
 		System.out.println("请输入用户登录密码：");
@@ -119,19 +111,18 @@ public class Controller {
 		System.out.println("请输入新的密码：");
 		setParameter(2);
 		if (userManager.changePassword(Parameter[0], Parameter[1], Parameter[2]))
-			return MessageAndError.SUCCESS;
-		return MessageAndError.ERROR_CHANGEPW;
+			return MsgAndError.SUCCESS;
+		return MsgAndError.ERROR_CHANGEPW;
 	}
-    
-	//用户注册
-	private MessageAndError userRegister() {
+
+	private MsgAndError userRegister() {
 		System.out.println("请输入用户名字：");
 		setParameter(0);
 		System.out.println("请输入用户登录密码：");
 		setParameter(1);
 		if (userManager.userRegister(Parameter[0], Parameter[1]))
-			return MessageAndError.SUCCESS;
-		return MessageAndError.ERROR_REGISTER;
+			return MsgAndError.SUCCESS;
+		return MsgAndError.ERROR_REGISTER;
 	}
 
 	private void setParameter(int num ) {
@@ -146,15 +137,13 @@ public class Controller {
 		}
 	}
 
-    //将字符串转换为时间类
-    public Time StringToTime(String string){
+
+	public Time StrToTime(String string){
 		return null;
 		
 	}
-    
-    //得到返回的信息
-	public String GetReturnMessage(){
-		return returnMessage;
+	public String GetReturnMsg(){
+		return returnMsg;
 		
 	}
 	

@@ -4,7 +4,7 @@ import java.io.InputStreamReader;
 
 public class Background{
 	private static Controller controller = new Controller();
-	private static MessageAndError returnMessage;
+	private static MsgAndError returnMsg;
 	private static String command;
 	
 	public static void main(String arg[])
@@ -22,14 +22,14 @@ public class Background{
 				e.printStackTrace();
 			}
 			
-			returnMessage = controller.parseCommand(command);
+			returnMsg = controller.parseCommand(command);
 
-			parseReturnMessage(returnMessage);
+			parseReturnMsg(returnMsg);
 		}
 	}
 
-	private static void parseReturnMessage(MessageAndError Message) {
-		switch(Message)
+	private static void parseReturnMsg(MsgAndError msg) {
+		switch( msg )
 		{
 			case SUCCESS:
 				System.out.println("操作成功完成!");
@@ -55,7 +55,7 @@ public class Background{
 			case ERROR_QUERY:
 				System.out.println("查询活动失败!");
 				break;
-			case SUCCESS_MESSAGE:
+			case SUCCESS_MSG:
 				System.out.println("社团\t活动\t报名时间\t\t开始时间");
 				System.out.println(controller.GetReturnMsg());
 				break;
