@@ -5,6 +5,6 @@ Locatoin
 About practice
 	First of all,we have to apologize for the mistake because the last submit(about 3 or 4 weeks ago) is not the newest version.(and the low score)
 	This handin covered the UnitTest,IntegrationTest,UsabilityTest,Functional/UITest and related code,sript,document.And we also make some improvement int the console part(like ClassFactory).
-	The bugtracker is in the end of each document.
+	The bugtracker is in the excel form if you want more detail check it in the test report.
 
 	At last enjoy reading!
