@@ -1,0 +1,38 @@
+ <project name="BaiXunHui" default="dist" basedir=".">  
+     
+        <property   name="appname"   value="BaiXunHui"   />   
+        <property   name="base"   value="."   />   
+        <property   name="src"   value="${base}/src/"   />   
+        <property   name="build"   value="${base}/classes/"   />   
+        <property   name="dist"   value="${base}/classes/"   />   
+     
+    	<target name="init">
+    		<tstamp/>
+    		<mkdir   dir="${build}"   />
+    	</target>
+    	
+        <target   name="compile"  depends="init"	 description="compile the source ">      
+                <javac     srcdir="${src}"   destdir="${build}">   
+                   
+                </javac>   
+        </target>   
+     
+    	<target	name="dist"	 depends="compile"	description="generate the distribution" >
+    			<mkdir dir="${dist}/lib"/>
+    			<jar jarfile="${dist}/lib/BaiXunHui-${DSTAMP}.jar" basedir="${build}"/>
+    	</target>
+    	
+        <target   name="run"   depends="dist">   
+                <exec   executable="java">   
+                        <arg   line="   -classpath   ${dist} Background"   />   
+                </exec>   
+        </target>   
+    	
+    	<target name="clean"	description="clean up" >
+    	    <delete dir="${build}"/>
+    	    <delete dir="${dist}"/>
+    	</target>
+    	
+    	  
+         
+  </project> 
